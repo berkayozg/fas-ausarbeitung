@@ -1,0 +1,58 @@
+% Angabe zu Blattgröße, Schriftgröße, Hinzufügen des Bildverzeichnis und Quellverzeichnis als Punkt im Inhaltsverzeichnis, einseitiger Druck
+\documentclass[a4paper,12pt,listof=toc,bibliography=totoc,oneside, titlepage, headsepline,headings=optiontohead]{scrartcl}	
+\include{settings.tex}
+
+\subject{Ausarbeitung}
+\title{Projekt E: Forward Collision Avoidance Assist}
+\subtitle{Fahrerassistenzsysteme II2511}
+\author{Berkay Özgür, C. Arda Sengenc}
+\mail{berkay.oezguer@mni.thm.de\\cagkan.arda.sengenc@mni.thm.de}
+\publishers{Dozent:\\Prof. Dr.-Ing. Seyed Eghbal Ghobadi}
+\institute{Mathematik, Naturwissenschaften und Informatik}
+
+
+% % % % % % % % % % % % % %
+% % % Dokument Beginn % % %
+% % % % % % % % % % % % % %
+\begin{document}
+	%Deckblatt
+	\include{chapter/deckblatt}
+	
+	%Inhaltsverzeichnis
+	\pagenumbering{roman}
+	\tableofcontents
+	\clearpage
+	
+	%Inhalt
+	\pagenumbering{arabic}
+	\pagestyle{scrheadings}
+	\setcounter{page}{1} %Seitenzähler auf 1 setzen, da Inhaltsverzeichnis sonst als Seite 1 zählt
+	\include{chapter/einleitung}
+	\include{chapter/hauptteil}
+	\include{chapter/ende}
+	\clearpage
+	
+	%Römische Seitennummerierung
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+	
+	% ================================
+	% Falls nicht verwendet bitte entsprechend auskommentieren
+	% ================================
+	%Anhang
+	\include{chapter/anhang}
+	\pagebreak
+	
+	%Abbildungsverzeichnis
+	\listoffigures
+	\pagebreak
+	
+	%Tabellenverzeichnis
+	\listoftables
+	\pagebreak
+
+	%Literaturverzeichnis
+	\bibliographystyle{literature/bibtex/IEEEtran}	
+	\bibliography{literature/literature}
+	
+\end{document}
