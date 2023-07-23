@@ -57,6 +57,46 @@ Bitte folgen Sie den unten stehenden Schritten, um das Projekt in Jupyter-Notebo
 * Wenn ein Codeteil Fehler zurückgibt, überprüfen Sie die Fehlermeldung sorgfältig, um mögliche Ursachen zu identifizieren. Stellen Sie sicher, dass die erforderlichen Pakete installiert und alle Abhängigkeiten erfüllt sind.
 * Falls ein Codeteil nicht wie erwartet funktioniert, führen Sie den betreffenden Teil erneut aus. Sie können auch den Kernel des Jupyter-Notebooks neu starten und dann alle Codeteile nacheinander ausführen.
 
+Vor jedem Aufruf eines Szenarios ist es wichtig, alle zuvor erstellten Aktoren (Fahrzeuge) zu löschen, um Konflikte oder unerwünschtes Verhalten zu vermeiden. Sie können folgendes verwenden, um die Aktoren zu löschen:
+```python
+#deleting the actors (cars)
+delete_all(actor_list)
+```
+Diese Funktion löscht alle Elemente in der Liste 'actor_list', die zuvor erstellten Fahrzeuge. Nachdem die Aktoren gelöscht wurden, können Sie die Aktoren erneut erstellen und die nächste Szenariofunktion aufrufen.
+
+```python
+# Spawning cars in the middle of the road
+# Create an empty list to store the spawned actors
+actor_list = []
+
+# Get the blueprint library for Tesla vehicles
+my_vehicles = world.get_blueprint_library().filter('*tesla*')
+# Define the spawn point for the first vehicle (Tesla)
+spawn_point = carla.Transform(
+    carla.Location(x=-9.890745, y=-211.247208, z=0.281942),
+    carla.Rotation(pitch=0.0, yaw=89.775124, roll=0.000000)
+)
+
+# Attempt to spawn the first vehicle (Tesla) at the defined spawn point
+vehicle = world.try_spawn_actor(my_vehicles[1], spawn_point)
+
+# Add the spawned vehicle to the actor_list
+actor_list.append(vehicle)
+
+# Get the blueprint library for Audi vehicles
+my_vehicles_2 = world.get_blueprint_library().filter('*audi*')
+
+# Define the spawn point for the second vehicle (Audi)
+spawn_point_2 = carla.Transform(
+    carla.Location(x=-9.890745, y=-240.247208, z=0.281942),
+    carla.Rotation(pitch=0.0, yaw=89.775124, roll=0.000000)
+)
+
+# Attempt to spawn the second vehicle (Audi) at the defined spawn point
+vehicle_2 = world.try_spawn_actor(my_vehicles_2[1], spawn_point_2)
+# Add the spawned vehicle to the actor_list
+actor_list.append(vehicle_2)
+```
 
 
 
