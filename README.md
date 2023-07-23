@@ -36,6 +36,7 @@ Für die Durchführung des Projekts und die Ausführung der implementierten Szen
 
 Pakete: Das Projekt erfordert zusätzliche Python-Pakete, um die Funktionalität zu gewährleisten. Die erforderlichen Pakete sind:
 
+* `carla`: CARLA Python-Paket. Um das Projekt auszuführen, benötigen Sie das `carla` Python-Paket.
 * `cv2 (OpenCV)`: Zur Verarbeitung und Analyse von Bildern und Videos.
 * `numpy`: Zur effizienten Handhabung von numerischen Berechnungen und Datenarrays.
 * `math`: Enthält mathematische Funktionen und Konstanten für die Berechnungen.
