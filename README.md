@@ -1,4 +1,4 @@
-# FAS, Projekt E
+# FAS, Projekt-E
 
 Willkommen zu unserem CARLA-Fahrerassistenzsystem-Projekt!
 
@@ -23,3 +23,40 @@ Dieses Szenario demonstriert die Wirksamkeit eines gut abgestimmten Kollisionsve
 ### 3. Automatic Obstacle Avoidance (Automatisches Hindernisumfahren)
 
 Das dritte Szenario beinhaltet das automatische Umfahren von Hindernissen. Das System erkennt Hindernisse auf der Fahrstrecke und berechnet automatisch eine alternative Fahrtroute, um das Hindernis sicher zu umfahren. Dieser Assistent hilft dem Fahrer, plötzlich auftretenden Hindernissen oder Gefahrensituationen auszuweichen und mögliche Kollisionen zu verhindern.
+
+## Erforderliche Software
+
+Für die Durchführung des Projekts und die Ausführung der implementierten Szenarien werden folgende Softwarekomponenten benötigt:
+
+`CARLA Simulator`: Der CARLA Simulator ist eine leistungsstarke und flexible Simulationsplattform für autonome Fahrsysteme. Er ermöglicht die realistische Simulation von Verkehrsszenarien, Umgebungen und Fahrzeugen. Der Simulator kann von der offiziellen CARLA-Website heruntergeladen und installiert werden.
+
+`Python 3.7`: Das Projekt wurde in der Programmiersprache Python entwickelt. Stellen Sie sicher, dass Python auf Ihrem System installiert ist. Python kann von der offiziellen Python-Website heruntergeladen und installiert werden.
+
+`Jupyter-Notebook oder -Lab`: Jupyter-Notebook ist eine interaktive Entwicklungsumgebung, die die Arbeit mit Python erleichtert und die Visualisierung von Ergebnissen unterstützt. Es kann mit der Installation von Anaconda oder direkt über Python-Pakete installiert werden.
+
+Pakete: Das Projekt erfordert zusätzliche Python-Pakete, um die Funktionalität zu gewährleisten. Die erforderlichen Pakete sind:
+
+* `cv2 (OpenCV)`: Zur Verarbeitung und Analyse von Bildern und Videos.
+* `numpy`: Zur effizienten Handhabung von numerischen Berechnungen und Datenarrays.
+* `math`: Enthält mathematische Funktionen und Konstanten für die Berechnungen.
+* `time`: Zur Zeiterfassung und Verzögerungsfunktionen.
+* `glob`: Zur Suche nach Dateipfaden und -namen.
+* `os`: Zur Interaktion mit dem Betriebssystem und Verzeichnisoperationen.
+* `sys`: Zur Systemspezifischen Funktionalitäten und Interaktion.
+
+Diese Softwarekomponenten sind erforderlich, um das Projekt auszuführen und die implementierten Szenarien erfolgreich zu testen. Stellen Sie sicher, dass Sie alle erforderlichen Pakete `in dem jeweiligen Verzeichnis` installiert haben, bevor Sie das Projekt starten.
+
+## Verwendung
+
+Bitte folgen Sie den unten stehenden Schritten, um das Projekt in Jupyter-Notebook auszuführen:
+
+* Stellen Sie sicher, dass Sie alle erforderlichen Softwarekomponenten gemäß dem Abschnitt "Erforderliche Software" installiert haben.
+* Öffnen Sie das Jupyter-Notebook und navigieren Sie zu dem Verzeichnis, in dem sich die Projektdateien befinden.
+* Führen Sie die Codeteile in der richtigen Reihenfolge aus. Um sicherzustellen, dass alles reibungslos funktioniert, stellen Sie sicher, dass jeder Codeteil erfolgreich ausgeführt wurde und keine Fehler zurückgegeben hat, bevor Sie zum nächsten Teil übergehen.
+* Wenn ein Codeteil Fehler zurückgibt, überprüfen Sie die Fehlermeldung sorgfältig, um mögliche Ursachen zu identifizieren. Stellen Sie sicher, dass die erforderlichen Pakete installiert und alle Abhängigkeiten erfüllt sind.
+* Falls ein Codeteil nicht wie erwartet funktioniert, führen Sie den betreffenden Teil erneut aus. Sie können auch den Kernel des Jupyter-Notebooks neu starten und dann alle Codeteile nacheinander ausführen.
+
+
+
+
+
